@@ -127,6 +127,3 @@ This project is licensed under the MIT License. See the [LICENSE](LICENSE) file 
 
 - [Dataset on Roboflow](https://universe.roboflow.com/ai-jbsna/drone3-c8zgs/dataset/18)  
 
----  
-
-This structure improves readability, adds professionalism, and ensures clarity for users and contributors. Let me know if you'd like further enhancements!
