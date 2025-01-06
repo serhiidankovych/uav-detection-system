@@ -11,8 +11,9 @@ export default function Document() {
         <meta name="apple-mobile-web-app-title" content="UAV Detection" />
         <meta
           name="description"
-          content="Real-Time UAV Detection with YOLOv10 on Sintetic Data"
+          content="Explore advanced UAV detection using YOLOv10 in real-time, powered by synthetic data for robust and scalable detection solutions."
         />
+
         <meta name="format-detection" content="telephone=no" />
         <meta name="mobile-web-app-capable" content="yes" />
         <meta name="msapplication-config" content="/icons/browserconfig.xml" />
@@ -24,11 +25,6 @@ export default function Document() {
 
         <link rel="manifest" href="/manifest.json" />
         <link rel="icon" href="/icon.png" />
-
-        <meta
-          name="google-site-verification"
-          content="kPFEI7Zrf_ZNTei2hRsBk-luHRtoO6a9AvndfpekAc8"
-        />
       </Head>
       <body>
         <Main />
