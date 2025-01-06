@@ -40,7 +40,8 @@ The UAV Detection System is a comprehensive solution for detecting rones. It int
   - Video processing  
   - Real-time camera stream detection  
 
-![Web Interface](https://github.com/user-attachments/assets/85af3dd7-a953-43ed-954c-a5a5cfcfe606)  
+![image](https://github.com/user-attachments/assets/846358bf-42a8-4b17-b521-8402f44a0b7e)
+
 
 ### 🛠️ Building Blocks of the UAV Detection System
 
