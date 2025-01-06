@@ -5,7 +5,14 @@ import { Upload, Search, Zap, Clock } from "lucide-react";
 import MetricsDashboard from "./MetricsDashboard";
 import DetectionResults from "./DetectionResults";
 
-const PhotoUploadDetection = (props: {
+interface DetectionResult {
+  className: string;
+  score: number;
+  boundingBox: [number, number, number, number];
+  timestamp: string;
+}
+
+interface PhotoUploadDetectionProps {
   modelName: string;
   session: InferenceSession;
   preprocess: (ctx: CanvasRenderingContext2D) => Tensor;
@@ -15,12 +22,10 @@ const PhotoUploadDetection = (props: {
     ctx: CanvasRenderingContext2D,
     modelName: string
   ) => void;
-  detectionResults?: Array<{
-    className: string;
-    score: number;
-    boundingBox: [number, number, number, number];
-  }>;
-}) => {
+  detectionResults?: Array<DetectionResult>;
+}
+
+const PhotoUploadDetection: React.FC<PhotoUploadDetectionProps> = (props) => {
   const canvasRef = useRef<HTMLCanvasElement>(null);
   const fileInputRef = useRef<HTMLInputElement>(null);
   const [inferenceTime, setInferenceTime] = useState<number>(0);
