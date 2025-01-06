@@ -1,4 +1,5 @@
 import React from "react";
+import Link from "next/link";
 
 const Home = () => {
   return (
@@ -14,15 +15,18 @@ const Home = () => {
         </p>
 
         <div className="mt-8 flex flex-col sm:flex-row gap-4">
-          <a
+          {/* Use Link without <a> tag */}
+          <Link
             href="/photo"
             className="px-6 py-3 bg-blue-600 text-white rounded-lg shadow-lg hover:bg-blue-700 transition-colors duration-300"
           >
             Get Started
-          </a>
+          </Link>
+          {/* Add rel="noreferrer" for external links with target="_blank" */}
           <a
             target="_blank"
             href="https://github.com/serhiidankovych/uav-detection-system"
+            rel="noreferrer"
             className="px-6 py-3 bg-gray-500 text-white rounded-lg shadow-lg hover:bg-gray-600 transition-colors duration-300"
           >
             Learn More
