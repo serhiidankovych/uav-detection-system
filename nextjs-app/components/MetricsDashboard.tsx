@@ -7,6 +7,7 @@ interface Metric {
   icon: LucideIcon;
   value: string | number;
   label: string;
+  colorScheme: ColorScheme;
 }
 
 interface MetricsDashboardProps {
