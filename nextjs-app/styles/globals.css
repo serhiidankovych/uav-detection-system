@@ -1,0 +1,35 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --border-radius: 12px;
+  --font-mono: ui-monospace, Menlo, Monaco, "Cascadia Mono", "Segoe UI Mono",
+    "Roboto Mono", "Oxygen Mono", "Ubuntu Monospace", "Source Code Pro",
+    "Fira Mono", "Droid Sans Mono", "Courier New", monospace;
+}
+
+/* Custom gradient background utilities */
+.bg-gradient-light-pastel {
+  background: linear-gradient(
+    135deg,
+    theme("colors.blue.50"),
+    theme("colors.purple.50")
+  );
+}
+
+.bg-gradient-soft-warm {
+  background: linear-gradient(
+    to right,
+    theme("colors.rose.100"),
+    theme("colors.orange.100")
+  );
+}
+
+.bg-gradient-light-cool {
+  background: linear-gradient(
+    to bottom right,
+    theme("colors.cyan.50"),
+    theme("colors.teal.100")
+  );
+}
