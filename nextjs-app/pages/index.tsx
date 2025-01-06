@@ -15,14 +15,13 @@ const Home = () => {
         </p>
 
         <div className="mt-8 flex flex-col sm:flex-row gap-4">
-          {/* Use Link without <a> tag */}
           <Link
             href="/photo"
             className="px-6 py-3 bg-blue-600 text-white rounded-lg shadow-lg hover:bg-blue-700 transition-colors duration-300"
           >
             Get Started
           </Link>
-          {/* Add rel="noreferrer" for external links with target="_blank" */}
+
           <a
             target="_blank"
             href="https://github.com/serhiidankovych/uav-detection-system"

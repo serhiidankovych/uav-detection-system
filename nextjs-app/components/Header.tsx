@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { Menu, X, Camera, Video, Cctv, Plane } from "lucide-react";
 import { useModel } from "../context/ModelContext";
+import Link from "next/link";
 
 const GlassEffectHeader = () => {
   const { modelIndex, setModelIndex } = useModel();
@@ -18,28 +19,28 @@ const GlassEffectHeader = () => {
         <div className="flex items-center justify-between h-16">
           {/* Logo - Responsive positioning */}
           <div className="flex-shrink-0">
-            <a
+            <Link
               href="/"
               className="flex items-center text-xl sm:text-2xl font-bold text-gray-800 hover:text-blue-600 transition-colors"
             >
               UAV
               <Plane className="w-4 h-4 sm:w-5 sm:h-5 ml-1 text-blue-600" />
               AI
-            </a>
+            </Link>
           </div>
 
           {/* Desktop Navigation */}
           <nav className="hidden md:flex items-center space-x-4">
             <span className="text-gray-700">Detections:</span>
             {navItems.map((item) => (
-              <a
+              <Link
                 key={item.href}
                 href={item.href}
                 className="flex items-center space-x-2 text-gray-700 hover:text-blue-600 transition-colors px-3 py-2 rounded-md hover:bg-blue-50"
               >
                 {item.icon}
                 <span className="hidden lg:inline">{item.name}</span>
-              </a>
+              </Link>
             ))}
           </nav>
 
@@ -92,14 +93,14 @@ const GlassEffectHeader = () => {
           </div>
           <div className="border-t border-gray-200/70"></div>
           {navItems.map((item) => (
-            <a
+            <Link
               key={item.href}
               href={item.href}
               className="flex items-center space-x-3 text-gray-700 hover:text-blue-600 px-3 py-2 rounded-md hover:bg-blue-50"
             >
               {item.icon}
               <span>{item.name}</span>
-            </a>
+            </Link>
           ))}
         </div>
       </div>
