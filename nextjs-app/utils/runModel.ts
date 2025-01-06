@@ -2,14 +2,21 @@ import { InferenceSession, Tensor } from "onnxruntime-web";
 
 export async function createModelCpu(url: string): Promise<InferenceSession> {
   try {
-    // Explicitly specify 'wasm' as the backend
     const session = await InferenceSession.create(url, {
       executionProviders: ["wasm"], // Use WebAssembly
     });
     return session;
-  } catch (error) {
-    console.error(`ONNX Model Loading Error: ${error.message}`);
-    throw new Error(`Failed to load ONNX model from ${url}: ${error.message}`);
+  } catch (error: unknown) {
+    // Assert that the error is of type Error
+    if (error instanceof Error) {
+      console.error(`ONNX Model Loading Error: ${error.message}`);
+      throw new Error(
+        `Failed to load ONNX model from ${url}: ${error.message}`
+      );
+    } else {
+      console.error("An unknown error occurred while loading the ONNX model.");
+      throw new Error(`Failed to load ONNX model from ${url}`);
+    }
   }
 }
 
