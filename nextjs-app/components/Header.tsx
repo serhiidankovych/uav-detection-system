@@ -52,9 +52,14 @@ const GlassEffectHeader = () => {
               onChange={(e) => setModelIndex(parseInt(e.target.value, 10))}
               className="w-32 lg:w-40 bg-white/50 border border-blue-200/50 rounded-md px-2 py-1 text-sm text-gray-700 focus:outline-none focus:ring-2 focus:ring-blue-300/50"
             >
-              <option value={0}>YOLO 640x640</option>
-              <option value={1}>YOLO 320x320</option>
-              <option value={2}>YOLO 160x160</option>
+              <option value={0}>YOLOn 160x160</option>
+              <option value={1}>YOLOn 256x256</option>
+              <option value={2}>YOLOn 320x320</option>
+              <option value={3}>YOLOn 640x640</option>
+              <option value={4}>YOLOm 160x160</option>
+              <option value={5}>YOLOm 256x256</option>
+              <option value={6}>YOLOm 320x320</option>
+              <option value={7}>YOLOm 640x640</option>
             </select>
           </div>
 
